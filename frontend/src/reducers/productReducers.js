@@ -1,7 +1,7 @@
 import {
     PRODCUT_LIST_REQUEST,
+    PRODUCT_LIST_FAIL,
     PRODUCT_LIST_SUCCESS,
-    PRODUCT_LIST_SUCCESS
 } from '../constants/productConstants'
 
 //a reducer takes in two things
@@ -9,15 +9,15 @@ import {
 //it also takes in an action
 // We will dispatch an action to this reducer
 
-export const productListReducer = (state = {product: []}, action)
-=>{
+export const productListReducer =
+    (state = { products: [] }, action) => {
     switch(action.type){
 
         case PRODCUT_LIST_REQUEST:
             return {loading:true, products:[]}
         case PRODUCT_LIST_SUCCESS:
             return {loading:false, products:action.payload} 
-        case PRODUCT_LIST_SUCCESS:
+        case PRODUCT_LIST_FAIL:
             return {loading:false, error: action.payload}  
         default:
             return state 
