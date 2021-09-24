@@ -18,3 +18,5 @@ const Loader = () => {
         </spinner>
     )
 }
+
+export default Loader

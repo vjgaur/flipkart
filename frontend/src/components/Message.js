@@ -2,9 +2,9 @@ import React from 'react'
 import { Alert } from 'react-bootstrap'
 const Message = ({variant, children}) => {
     return
-    <Alet variant={variant}>
+    <Alert variant={variant}>
         {children}
-    </Alet>
+    </Alert>
 }
 
 Message.defaultProps = {
